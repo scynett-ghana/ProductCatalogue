@@ -14,6 +14,10 @@ const routes: Routes = [
                 'loadChildren': '.\/pages\/default\/blank\/blank.module#BlankModule',
             },
             {
+                path: 'product',
+                loadChildren: '.\/pages\/default\/product\/product.module#ProductModule',
+            },
+            {
                 'path': '',
                 'redirectTo': 'index',
                 'pathMatch': 'full',
