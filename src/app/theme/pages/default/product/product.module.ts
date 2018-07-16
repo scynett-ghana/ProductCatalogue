@@ -7,6 +7,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from '../default.component';
 import { LayoutModule } from '../../../layouts/layout.module';
 
+import {HttpClientModule} from "@angular/common/http";
+import {ProductService} from "../../../../_services/product.service";
+
 const routes: Routes = [
   {
     path: '',
@@ -36,16 +39,21 @@ const routes: Routes = [
     ]
   }
 ];
+
 @NgModule({
   imports: [
-    CommonModule,
-    LayoutModule,
-    RouterModule.forChild(routes),
+      CommonModule,
+      LayoutModule,
+      HttpClientModule,
+      RouterModule.forChild(routes),
   ],
+    providers:[
+        ProductService
+    ],
   declarations: [
-    ProductListComponent,
-    ProductFormComponent,
-    ProductDetailComponent
+      ProductListComponent,
+      ProductFormComponent,
+      ProductDetailComponent
   ]
 })
 export class ProductModule { }
