@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 
-Injectable();
+@Injectable()
 export class ProductService{
     productBaseUrl = "http://localhost:3000/products/";
     constructor(private  http: HttpClient){}

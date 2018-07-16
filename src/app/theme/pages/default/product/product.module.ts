@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductFormComponent } from './product-form/product-form.component';
@@ -8,6 +8,7 @@ import { DefaultComponent } from '../default.component';
 import { LayoutModule } from '../../../layouts/layout.module';
 
 import {HttpClientModule} from "@angular/common/http";
+import {ProductService} from "../../../../_services/product.service";
 
 const routes: Routes = [
   {
@@ -50,6 +51,8 @@ const routes: Routes = [
       ProductListComponent,
       ProductFormComponent,
       ProductDetailComponent
-  ]
+  ],
+    providers:[ProductService],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProductModule { }
