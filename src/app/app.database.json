@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": "16b0fcb6-aca4-4157-94bc-a570aea2afe8",
+      "productName": "elit",
+      "productId": "deserunt2860",
+      "price": "$3,361.07",
+      "image": "http://placehold.it/32x32",
+      "category": "CatB",
+      "description": "Veniam qui aliquip duis exercitation magna sit minim pariatur eu. Ex dolor mollit enim laborum sint aliqua. Fugiat nulla eu sit cillum sint culpa officia esse. Elit enim fugiat duis nostrud excepteur magna labore pariatur nulla Lorem elit anim. Ipsum quis eiusmod proident consequat do nisi id. Est fugiat enim fugiat dolore excepteur cupidatat laborum occaecat culpa qui velit.\r\n",
+      "created": "2018-06-11T03:36:32 -00:00"
+    },
+    {
+      "id": "d31875b1-f4e1-42ac-b266-31222d5b6cd3",
+      "productName": "reprehenderit",
+      "productId": "amet2845",
+      "price": "$1,709.22",
+      "image": "http://placehold.it/32x32",
+      "category": "CatC",
+      "description": "Eiusmod dolor Lorem do proident enim anim pariatur irure quis voluptate proident. Anim sit exercitation enim elit fugiat veniam ad. Sit proident mollit cupidatat laboris duis incididunt eiusmod nisi eiusmod. Do consectetur est sunt reprehenderit sint deserunt exercitation tempor anim irure irure quis culpa mollit.\r\n",
+      "created": "2018-05-06T07:43:27 -00:00"
+    },
+    {
+      "id": "3c1e959b-4ed4-46fe-9d62-75027b40cb79",
+      "productName": "dolore",
+      "productId": "magna3732",
+      "price": "$3,274.46",
+      "image": "http://placehold.it/32x32",
+      "category": "CatA",
+      "description": "Velit sint do eiusmod pariatur proident ex qui reprehenderit dolor cupidatat Lorem duis. Cillum incididunt mollit exercitation anim consequat nisi labore veniam dolor. Dolor qui qui do proident pariatur velit eiusmod Lorem minim elit commodo. Exercitation tempor consectetur excepteur quis laborum veniam eu cupidatat ipsum labore anim. Pariatur voluptate reprehenderit sint nulla qui. Nisi in aute velit ex dolore aliqua aliqua voluptate sint ut.\r\n",
+      "created": "2018-01-08T08:33:01 -00:00"
+    },
+    {
+      "id": "d1a08c82-03a4-4cce-be37-5e91ef4b7d42",
+      "productName": "ipsum",
+      "productId": "aliqua2095",
+      "price": "$2,214.36",
+      "image": "http://placehold.it/32x32",
+      "category": "CatA",
+      "description": "Magna pariatur dolor est incididunt tempor cillum labore anim laboris do labore quis. Officia velit non occaecat officia exercitation minim voluptate exercitation incididunt sunt eu. Officia veniam voluptate culpa non in sint.\r\n",
+      "created": "2015-10-08T05:19:31 -00:00"
+    },
+    {
+      "id": "9615c53b-dd66-4127-8fba-0e8279e51107",
+      "productName": "pariatur",
+      "productId": "in1881",
+      "price": "$2,004.45",
+      "image": "http://placehold.it/32x32",
+      "category": "CatC",
+      "description": "Et et amet amet anim esse consequat magna esse voluptate deserunt ullamco. Aliqua sint est eiusmod fugiat ea ad in do eu elit Lorem veniam. Ullamco non amet ipsum elit eu minim.\r\n",
+      "created": "2014-10-05T07:15:42 -00:00"
+    }
+  ]
+}
