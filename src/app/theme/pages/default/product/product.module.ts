@@ -8,7 +8,6 @@ import { DefaultComponent } from '../default.component';
 import { LayoutModule } from '../../../layouts/layout.module';
 
 import {HttpClientModule} from "@angular/common/http";
-import {ProductService} from "../../../../_services/product.service";
 
 const routes: Routes = [
   {
@@ -47,9 +46,6 @@ const routes: Routes = [
       HttpClientModule,
       RouterModule.forChild(routes),
   ],
-    providers:[
-        ProductService
-    ],
   declarations: [
       ProductListComponent,
       ProductFormComponent,
