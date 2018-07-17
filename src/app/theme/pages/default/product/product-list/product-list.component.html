@@ -45,10 +45,9 @@
     </div>
   </div>
 
-
   <div class="row">
 
-    <div class="offset-lg-3 col-md-6 col-sm-12">
+    <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let product of list">
       <div class="m-portlet m-portlet--full-height ">
         <div class="m-portlet__body">
           <!--begin::Content-->
@@ -57,21 +56,21 @@
             <div class="m-widget5">
               <div class="m-widget5__item">
                 <div class="m-widget5__pic">
-                  <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
+                  <img class="m-widget7__img" [src]="product.image" alt="">
                 </div>
                 <div class="m-widget5__content">
-                  <h4 class="m-widget5__title">
-                    Product name
-                  </h4>
+                  <h3 class="m-widget5__title">
+                    {{product.productName | uppercase}}
+                  </h3>
                   <span class="m-widget5__desc">
-                    Product Id
+                    {{product.productId}}
                   </span>
                   <div class="m-widget5__info">
-                    <span class="m-widget5__author">
-                      Category:
-                    </span>
-                    <span class="m-widget5__info-author m--font-info">
-                      Fly themes
+                    <h6 class="m-widget5__author">
+                      {{product.category}}
+                    </h6>
+                    <span class="m-widget5__price">
+                      {{product.price}}
                     </span>
                     <!--end::Content-->
                   </div>
@@ -83,284 +82,8 @@
         </div>
       </div>
     </div>
-
-    <div class="col-lg-3 col-md-6 col-sm-12">
-      <div class="m-portlet m-portlet--full-height ">
-        <div class="m-portlet__body">
-          <!--begin::Content-->
-          <div class="tab-pane" id="m_widget5_tab2_content" aria-expanded="false">
-            <!--begin::m-widget5-->
-            <div class="m-widget5">
-              <div class="m-widget5__item">
-                <div class="m-widget5__pic">
-                  <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
-                </div>
-                <div class="m-widget5__content">
-                  <h4 class="m-widget5__title">
-                    Product name
-                  </h4>
-                  <span class="m-widget5__desc">
-                    Product Id
-                  </span>
-                  <div class="m-widget5__info">
-                    <span class="m-widget5__author">
-                      Category:
-                    </span>
-                    <span class="m-widget5__info-author m--font-info">
-                      Fly themes
-                    </span>
-                    <!--end::Content-->
-                  </div>
-                </div>
-                <!--end:: Widgets/Best Sellers-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-6 col-sm-12">
-      <div class="m-portlet m-portlet--full-height ">
-        <div class="m-portlet__body">
-          <!--begin::Content-->
-          <div class="tab-pane" id="m_widget5_tab2_content" aria-expanded="false">
-            <!--begin::m-widget5-->
-            <div class="m-widget5">
-              <div class="m-widget5__item">
-                <div class="m-widget5__pic">
-                  <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
-                </div>
-                <div class="m-widget5__content">
-                  <h4 class="m-widget5__title">
-                    Product name
-                  </h4>
-                  <span class="m-widget5__desc">
-                    Product Id
-                  </span>
-                  <div class="m-widget5__info">
-                    <span class="m-widget5__author">
-                      Category:
-                    </span>
-                    <span class="m-widget5__info-author m--font-info">
-                      Fly themes
-                    </span>
-
-                    <!--end::Content-->
-                  </div>
-                </div>
-                <!--end:: Widgets/Best Sellers-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-6 col-sm-12">
-      <div class="m-portlet m-portlet--full-height ">
-        <div class="m-portlet__body">
-          <!--begin::Content-->
-          <div class="tab-pane" id="m_widget5_tab2_content" aria-expanded="false">
-            <!--begin::m-widget5-->
-            <div class="m-widget5">
-              <div class="m-widget5__item">
-                <div class="m-widget5__pic">
-                  <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
-                </div>
-                <div class="m-widget5__content">
-                  <h4 class="m-widget5__title">
-                    Product name
-                  </h4>
-                  <span class="m-widget5__desc">
-                    Product Id
-                  </span>
-                  <div class="m-widget5__info">
-                    <span class="m-widget5__author">
-                      Category:
-                    </span>
-                    <span class="m-widget5__info-author m--font-info">
-                      Fly themes
-                    </span>
-                    <!--end::Content-->
-                  </div>
-                </div>
-                <!--end:: Widgets/Best Sellers-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-6 col-sm-12">
-      <div class="m-portlet m-portlet--full-height ">
-        <div class="m-portlet__body">
-          <!--begin::Content-->
-          <div class="tab-pane" id="m_widget5_tab2_content" aria-expanded="false">
-            <!--begin::m-widget5-->
-            <div class="m-widget5">
-              <div class="m-widget5__item">
-                <div class="m-widget5__pic">
-                  <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
-                </div>
-                <div class="m-widget5__content">
-                  <h4 class="m-widget5__title">
-                    Product name
-                  </h4>
-                  <span class="m-widget5__desc">
-                    Product Id
-                  </span>
-                  <div class="m-widget5__info">
-                    <span class="m-widget5__author">
-                      Category:
-                    </span>
-                    <span class="m-widget5__info-author m--font-info">
-                      Fly themes
-                    </span>
-                    <!--end::Content-->
-                  </div>
-                </div>
-                <!--end:: Widgets/Best Sellers-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-12">
-      <div class="m-portlet m-portlet--full-height ">
-        <div class="m-portlet__body">
-          <!--begin::Content-->
-          <div class="tab-pane" id="m_widget5_tab2_content" aria-expanded="false">
-            <!--begin::m-widget5-->
-            <div class="m-widget5">
-              <div class="m-widget5__item">
-                <div class="m-widget5__pic">
-                  <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
-                </div>
-                <div class="m-widget5__content">
-                  <h4 class="m-widget5__title">
-                    Product name
-                  </h4>
-                  <span class="m-widget5__desc">
-                    Product Id
-                  </span>
-                  <div class="m-widget5__info">
-                    <span class="m-widget5__author">
-                      Category:
-                    </span>
-                    <span class="m-widget5__info-author m--font-info">
-                      Fly themes
-                    </span>
-                    <!--end::Content-->
-                  </div>
-                </div>
-                <!--end:: Widgets/Best Sellers-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-6 col-sm-12">
-      <div class="m-portlet m-portlet--full-height ">
-        <div class="m-portlet__body">
-          <!--begin::Content-->
-          <div class="tab-pane" id="m_widget5_tab2_content" aria-expanded="false">
-            <!--begin::m-widget5-->
-            <div class="m-widget5">
-              <div class="m-widget5__item">
-                <div class="m-widget5__pic">
-                  <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
-                </div>
-                <div class="m-widget5__content">
-                  <h4 class="m-widget5__title">
-                    Product name
-                  </h4>
-                  <span class="m-widget5__desc">
-                    Product Id
-                  </span>
-                  <div class="m-widget5__info">
-                    <span class="m-widget5__author">
-                      Category:
-                    </span>
-                    <span class="m-widget5__info-author m--font-info">
-                      Fly themes
-                    </span>
-                    <!--end::Content-->
-                  </div>
-                </div>
-                <!--end:: Widgets/Best Sellers-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-6 col-sm-12">
-      <div class="m-portlet m-portlet--full-height ">
-        <div class="m-portlet__body">
-          <!--begin::Content-->
-          <div class="tab-pane" id="m_widget5_tab2_content" aria-expanded="false">
-            <!--begin::m-widget5-->
-            <div class="m-widget5">
-              <div class="m-widget5__item">
-                <div class="m-widget5__pic">
-                  <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
-                </div>
-                <div class="m-widget5__content">
-                  <h4 class="m-widget5__title">
-                    Product name
-                  </h4>
-                  <span class="m-widget5__desc">
-                    Product Id
-                  </span>
-                  <div class="m-widget5__info">
-                    <span class="m-widget5__author">
-                      Category:
-                    </span>
-                    <span class="m-widget5__info-author m--font-info">
-                      Fly themes
-                    </span>
-                    <!--end::Content-->
-                  </div>
-                </div>
-                <!--end:: Widgets/Best Sellers-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
-
-  <nav class="float-right" aria-label="Page navigation example">
-    <ul class="pagination">
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-          <span class="sr-only">Previous</span>
-        </a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">1</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">2</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">3</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-          <span class="sr-only">Next</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <div class="d-flex justify-content-center pagination-lg">
+    <ngb-pagination [collectionSize]="totalProducts" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+  </div>
 </div>
