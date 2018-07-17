@@ -1,4 +1,4 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductFormComponent } from './product-form/product-form.component';
@@ -7,8 +7,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from '../default.component';
 import { LayoutModule } from '../../../layouts/layout.module';
 
-import {HttpClientModule} from "@angular/common/http";
-import {ProductService} from "../../../../_services/product.service";
+import { HttpClientModule } from "@angular/common/http";
+import { ProductService } from "../../../../_services/product.service";
+import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
@@ -42,17 +43,21 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-      CommonModule,
-      LayoutModule,
-      HttpClientModule,
-      RouterModule.forChild(routes),
+    CommonModule,
+    LayoutModule,
+    HttpClientModule,
+    RouterModule.forChild(routes),
+    NgbModule.forRoot(),
+    NgbPaginationModule
+
   ],
   declarations: [
-      ProductListComponent,
-      ProductFormComponent,
-      ProductDetailComponent
+    ProductListComponent,
+    ProductFormComponent,
+    ProductDetailComponent,
+
   ],
-    providers:[ProductService],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  providers: [ProductService],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProductModule { }
