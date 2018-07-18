@@ -10,6 +10,8 @@ import { LayoutModule } from '../../../layouts/layout.module';
 import { HttpClientModule } from "@angular/common/http";
 import { ProductService } from "../../../../_services/product.service";
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { FilterPipe } from "./product-list/filter.pipe";
+import { FormsModule } from "@angular/forms";
 
 const routes: Routes = [
   {
@@ -46,6 +48,7 @@ const routes: Routes = [
     CommonModule,
     LayoutModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forChild(routes),
     NgbModule.forRoot(),
     NgbPaginationModule
@@ -55,6 +58,7 @@ const routes: Routes = [
     ProductListComponent,
     ProductFormComponent,
     ProductDetailComponent,
+    FilterPipe,
 
   ],
   providers: [ProductService],
