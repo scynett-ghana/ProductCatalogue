@@ -71,7 +71,7 @@
                               <img class="m-widget7__img" [src]="product.image" alt="">
                             </div>
                             <div class="m-widget5__content">
-                              <a [routerLink]="['/product/detail/:id']" class="" >
+                              <a [routerLink]="['/product/detail', product.id]" class="" >
                                 <h3 class="m-widget1__title">
                                   {{product.productName | uppercase}}
                                 </h3>
