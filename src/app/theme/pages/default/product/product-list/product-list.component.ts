@@ -20,6 +20,7 @@ export class ProductListComponent implements OnInit {
   categories: Array<any>;
 
   constructor(private product: ProductService) { }
+ 
 
   getProductList(pageSize: number, currentPage: number) {
     this.product.getAll().subscribe((data: any) => {

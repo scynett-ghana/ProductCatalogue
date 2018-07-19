@@ -15,7 +15,7 @@
               </div>
               <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
                 <li class="m-nav__item">
-                  <a href="#" class="m-nav__link m-nav__link--icon">
+                  <a [routerLink]="['/product/add']" class="m-nav__link m-nav__link--icon">
                     <button type="button" class="btn m-btn--pill m-btn--air btn-outline-metal">
                       Add product
                     </button>
@@ -47,9 +47,8 @@
                 </li>
                 <li class=" m-nav__item">
                   <select [(ngModel)]="cat" class="form-control" id="m_notify_icon">
-                      <option value="" >All categories</option>
+                    <option value="">All categories</option>
                     <option value="{{c}}" *ngFor="let c of categories">{{c}}</option>
-                   
                   </select>
                 </li>
               </ul>
@@ -64,16 +63,18 @@
                     <!--begin::Content-->
                     <!--begin::m-widget5-->
                     <div class="m-widget5">
-                      <div class="m-widget5__item p-1 m-1">
+                      <div class="m-widget5__item p-2 m-1">
                         <div class="row m-row--no-padding align-items-center">
                           <div class="col">
                             <div class="m-widget5__pic">
                               <img class="m-widget7__img" [src]="product.image" alt="">
                             </div>
                             <div class="m-widget5__content">
-                              <h3 class="m-widget1__title">
-                                {{product.productName | uppercase}}
-                              </h3>
+                              <a class="text-light" [routerLink]="['/product/detail', product.id]">
+                                <h3 class="m-widget1__title text-dark">
+                                  {{product.productName | uppercase}}
+                                </h3>
+                              </a>
                               <p class="m-widget5__desc">
                                 {{product.productId}}
                               </p>
@@ -91,7 +92,6 @@
                         </div>
                       </div>
                     </div>
-                    
                   </div>
                 </div>
               </div>
