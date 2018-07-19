@@ -20,7 +20,7 @@ export class ProductListComponent implements OnInit {
   categories: Array<any>;
 
   constructor(private product: ProductService) { }
- 
+
 
   getProductList(pageSize: number, currentPage: number) {
     this.product.getAll().subscribe((data: any) => {
@@ -36,7 +36,7 @@ export class ProductListComponent implements OnInit {
 
   loadPage(event) {
     if (event > 1) {
-      return this.totalProducts.slice((this.currentPage - 1) * 12, this.currentPage);
+      return this.totalProducts.slice((this.currentPage - 0) * 12, this.currentPage);
     }
     this.getProductList(this.pageSize, this.currentPage);
     console.log(event);
