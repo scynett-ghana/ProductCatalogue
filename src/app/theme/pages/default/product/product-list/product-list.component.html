@@ -15,7 +15,7 @@
               </div>
               <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
                 <li class="m-nav__item">
-                  <a href="#" class="m-nav__link m-nav__link--icon">
+                  <a [routerLink]="['/product/add']" class="m-nav__link m-nav__link--icon">
                     <button type="button" class="btn m-btn--pill m-btn--air btn-outline-metal">
                       Add product
                     </button>
@@ -47,9 +47,9 @@
                 </li>
                 <li class=" m-nav__item">
                   <select [(ngModel)]="cat" class="form-control" id="m_notify_icon">
-                      <option value="" >All categories</option>
+                    <option value="">All categories</option>
                     <option value="{{c}}" *ngFor="let c of categories">{{c}}</option>
-                   
+
                   </select>
                 </li>
               </ul>
@@ -71,9 +71,11 @@
                               <img class="m-widget7__img" [src]="product.image" alt="">
                             </div>
                             <div class="m-widget5__content">
-                              <h3 class="m-widget1__title">
-                                {{product.productName | uppercase}}
-                              </h3>
+                              <a [routerLink]="['/product/detail/:id']" class="" >
+                                <h3 class="m-widget1__title">
+                                  {{product.productName | uppercase}}
+                                </h3>
+                              </a>
                               <p class="m-widget5__desc">
                                 {{product.productId}}
                               </p>
@@ -91,7 +93,6 @@
                         </div>
                       </div>
                     </div>
-                    
                   </div>
                 </div>
               </div>
