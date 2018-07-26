@@ -11,7 +11,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ProductService } from "../../../../_services/product.service";
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterPipe } from "./product-list/filter.pipe";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 const routes: Routes = [
   {
@@ -49,6 +49,7 @@ const routes: Routes = [
     LayoutModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes),
     NgbModule.forRoot(),
     NgbPaginationModule

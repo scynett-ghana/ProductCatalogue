@@ -1,138 +1,112 @@
-	<!--begin::Portlet-->
-  <div class="m-portlet m-portlet--tab">
-    <div class="m-portlet__head">
-      <div class="m-portlet__head-caption">
-        <div class="m-portlet__head-title">
-          <span class="m-portlet__head-icon m--hide">
-            <i class="la la-gear"></i>
-          </span>
-          <h3 class="m-portlet__head-text">
-            Add New Product
+<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark 
+m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+  <div class="m-grid__item m-grid__item--fluid m-wrapper mb-5">
+    <!-- BEGIN: Subheader -->
+    <div class="m-subheader ">
+      <div class="d-flex align-items-center">
+        <div class="mr-auto">
+          <h3 class="m-subheader__title m-subheader__title--separator">
+            Add Product
           </h3>
+          <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+            <li class="m-nav__item m-nav__item--home">
+              <a href="#" class="m-nav__link m-nav__link--icon">
+                <i class="m-nav__link-icon la la-home"></i>
+              </a>
+            </li>
+            <li class="m-nav__separator">
+              -
+            </li>
+            <li class="m-nav__item">
+              <a href="" class="m-nav__link">
+                <span class="m-nav__link-text">
+                  Add
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-    <!--begin::Form-->
-    <form class="m-form m-form--fit m-form--label-align-right row justify-content-md-center">
-      <div class="col col-lg-6">
-        <div class="m-portlet__body">
-          <div class="form-group m-form__group m--margin-top-10">
-            <div class="alert m-alert m-alert--default" role="alert">
-              All fields are required
-            </div>
-          </div>
-          <div class="form-group m-form__group">
-            <label for="exampleInputEmail1">
-              Name of Product
-            </label>
-            <input type="email" class="form-control m-input m-input--air m-input--pill" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Product">
-          <!-- <span class="m-form__help">
-              We'll never share your email with anyone else.
-            </span>-->
-          </div>
-          <div class="form-group m-form__group">
-            <label for="exampleInputPassword1">
-              Product ID
-            </label>
-            <input type="" class="form-control m-input m-input--air m-input--pill" id="" placeholder="Enter Product ID">
-          </div>
-          <div class="form-group m-form__group">
-            <label for="SelectCategory">
-              Category
-            </label>
-            <select class="form-control m-input m-input--air m-input--pill" id="SelectCategory">
-              <option>
-                Category 1
-              </option>
-              <option>
-                Category 2
-              </option>
-              <option>
-                Category 3
-              </option>
-              <option>
-                Category 4
-              </option>
-              <option>
-                Category 5
-              </option>
-            </select>
-          </div>
-        <!-- <div class="form-group m-form__group">
-            <label for="exampleSelect2">
-              Example multiple select
-            </label>
-            <select multiple="" class="form-control m-input m-input--air m-input--pill" id="exampleSelect2">
-              <option>
-                1
-              </option>
-              <option>
-                2
-              </option>
-              <option>
-                3
-              </option>
-              <option>
-                4
-              </option>
-              <option>
-                5
-              </option>
-            </select>
-          </div> -->
-          <div class="form-group m-form__group">
-            <label for="exampleInputEmail1">
-              Unit Price
-            </label>
-            <input type="email" class="form-control m-input m-input--air m-input--pill" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Unit Price">
-          </div>
-          <div class="form-group m-form__group">
-              <label>
-                Left Button Dropdown
-              </label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Action
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">
-                      Action
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      Another action
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                    <div role="separator" class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
-                      Separated link
-                    </a>
-                  </div>
+  </div>
+  <div class="m-content pt-0 mt-0">
+    <!--begin::Portlet-->
+    <div class="m-portlet">
+      <div class="m-portlet__body">
+        <!--begin::Form-->
+        <div class="row">
+          <div class="col col-lg-6">
+            <form class="m-form" [formGroup]="productForm">
+              <div class="form-group m-form__group">
+                <div class="alert m-alert m-alert--default" role="alert"> All fields are required </div>
+              </div>
+              <div class="form-group m-form__group">
+                <label for=""> Name of Product </label>
+                <input formControlName="productName" type="text" class="form-control m-input m-input--air m-input--pill" placeholder="Enter Product...."
+                  id="name" required>
+                <div *ngIf="productForm.controls['productName'].touched" class="text-danger">
+                  <small *ngIf="productForm.controls['productName'].hasError('required')">Product Name is required</small>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+              </div>
+              <div class="form-group m-form__group">
+                <label for=""> Product ID </label>
+                <input formControlName="productId" type="" class="form-control m-input m-input--air m-input--pill" id="" placeholder="Enter Product ID....">
+                <div *ngIf="productForm.controls['productId'].touched" class="text-danger">
+                  <small *ngIf="productForm.controls['productId'].hasError('required')">Product Id is required</small>
+                </div>
+              </div>
+              <div class="form-group m-form__group">
+                <label for="SelectCategory"> Category </label>
+                <select formControlName="category" class="form-control m-input m-input--air m-input--pill" id="SelectCategory">
+                  <option disabled> Select Category </option>
+                  <option> Category A </option>
+                  <option> Category B </option>
+                  <option> Category C </option>
+                  <option> Category D </option>
+                </select>
+                <div *ngIf="productForm.controls['category'].touched" class="text-danger">
+                  <small *ngIf="productForm.controls['category'].hasError('required')">Select a Category</small>
+                </div>
+              </div>
+              <div class="form-group m-form__group">
+                <label for=""> Unit Price </label>
+                <div class="input-group">
+                  <span class="input-group-text"> $ </span>
+                  <input formControlName="price" type="number" class="form-control m-input m-input--air m-input--pill" aria-describedby=""
+                    placeholder="Enter Unit Price" id="number">
+                </div>
+                <div *ngIf="productForm.controls['price'].touched" class="text-danger">
+                  <small *ngIf="productForm.controls['price'].hasError('required')">Price is required</small>
+                </div>
+              </div>
+              <div class="form-group m-form__group">
+                <label for="Description"> Description </label>
+                <textarea formControlName="description" class="form-control m-input m-input--air m-input--pill" id="Description" rows="4"></textarea>
+                <div *ngIf="productForm.controls['description'].touched" class="text-danger">
+                  <small *ngIf="productForm.controls['description'].hasError('required')">Description is required</small>
+                </div>
+              </div>
+              <div class="m-portlet__foot m-portlet__foot--fit ">
+                <div class="m-form__actions">
+                  <button (click)="submit()" [disabled]="productForm.invalid" type="submit" class="btn btn-dark"> Add </button>
+                  <button type="reset" class="btn btn-secondary"> Cancel </button>
+                </div>
+              </div>
+            </form>
+            <!--end::Form-->
+          </div>
+          <div class="col col-lg-6">
+            <div class="form-group m-form__group">
+              <div class="media">
+                <img class="m--margin-right-20" src="http://via.placeholder.com/350x150" title="">
+              </div>
+              <div class="d-flex align-items-center mt-1">
+                <button type="" class="btn btn-dark w-25"> Upload </button>
               </div>
             </div>
-          <div class="form-group m-form__group">
-            <label for="">
-              Discription
-            </label>
-            <textarea class="form-control m-input m-input--air m-input--pill" id="Dicription" rows="4"></textarea>
           </div>
         </div>
-        <div class="m-portlet__foot m-portlet__foot--fit">
-          <div class="m-form__actions">
-            <button type="reset" class="btn btn-brand">
-            Add
-            </button>
-            <button type="reset" class="btn btn-secondary">
-              Cancel
-            </button>
-          </div>
-        </div>
-      </div>  
-    </form>
-    <!--end::Form-->
+      </div>
+    </div>
   </div>
   <!--end::Portlet-->

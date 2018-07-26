@@ -46,8 +46,8 @@
                   </div>
                 </li>
                 <li class=" m-nav__item">
-                  <select [(ngModel)]="cat" class="form-control bg-light" id="m_notify_icon">
-                    <option value="">All categories</option>
+                  <select [(ngModel)]="cat" class="form-control bg-secondary" id="m_notify_icon">
+                    <option value="" class="divider">All categories</option>
                     <option value="{{c}}" *ngFor="let c of categories">{{c}}</option>
                   </select>
                 </li>

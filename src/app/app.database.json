@@ -139,6 +139,38 @@
       "category": "CatC",
       "description": "Et et amet amet anim esse consequat magna esse voluptate deserunt ullamco. Aliqua sint est eiusmod fugiat ea ad in do eu elit Lorem veniam. Ullamco non amet ipsum elit eu minim.\r\n",
       "created": "2014-10-05T07:15:42 -00:00"
+    },
+    {
+      "id": "w2V8BPq",
+      "productName": "kglklil",
+      "productId": "8uo",
+      "category": "Category B",
+      "price": 80,
+      "description": "this.product.save(this.product).subscribe((data: any) => {\n      this.product = data;\n      console.log(this.product)\n    })"
+    },
+    {
+      "id": "j4R7yKW",
+      "productName": "jack",
+      "productId": "123D45",
+      "category": "Category C",
+      "price": 345,
+      "description": "this.productForm = this.formBuilder.group( productName: ['', Validators.requirproductId: ['', Validators.required]category: Validators.required],price: ['', Validators.required],description: ['', Validators.required]"
+    },
+    {
+      "id": "RUxyyay",
+      "productName": "blade",
+      "productId": "12345t",
+      "category": "Category D",
+      "price": 120,
+      "description": "what do you want to know ehn..............."
+    },
+    {
+      "id": "DSCRz9Z",
+      "productName": "gfgf``",
+      "productId": "f",
+      "category": "Category B",
+      "price": 45676,
+      "description": "lorem"
     }
   ]
 }
