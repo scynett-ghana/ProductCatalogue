@@ -171,6 +171,14 @@
       "category": "Category B",
       "price": 45676,
       "description": "lorem"
+    },
+    {
+      "id": "RqvEFKD",
+      "productName": "what",
+      "productId": "123",
+      "category": "Category B",
+      "price": 36,
+      "description": "this create Product Form"
     }
   ]
 }
