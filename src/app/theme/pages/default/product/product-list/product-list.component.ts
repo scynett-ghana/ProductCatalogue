@@ -21,6 +21,14 @@ export class ProductListComponent implements OnInit {
 
   constructor(private product: ProductService) { }
 
+  remove(p) {
+    this.product.delete(p.id).subscribe(() => {
+      alert("product deleted");
+      this.loadPage(event);
+    },
+      () => { alert("something happened"); })
+
+  }
 
   getProductList(pageSize: number, currentPage: number) {
     this.product.getAll().subscribe((data: any) => {
