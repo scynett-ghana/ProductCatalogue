@@ -122,11 +122,10 @@
       "id": "d1a08c82-03a4-4cce-be37-5e91ef4b7d42",
       "productName": "ipsum",
       "productId": "aliqua2095",
-      "price": "$2,214.36",
       "image": "http://placehold.it/32x32",
       "category": "CatA",
-      "description": "Magna pariatur dolor est incididunt tempor cillum labore anim laboris do labore quis. Officia velit non occaecat officia exercitation minim voluptate exercitation incididunt sunt eu. Officia veniam voluptate culpa non in sint.\r\n",
-      "created": "2015-10-08T05:19:31 -00:00"
+      "price": "$2,214.36",
+      "description": "Magna pariatur dolor est incididunt tempor cillum labore anim laboris do labore quis. Officia velit non occaecat officia exercitation minim voluptate exercitation incididunt sunt eu. Officia veniam voluptate culpa non in sint.\r\n"
     },
     {
       "id": "9615c53b-dd66-4127-8fba-0e8279e51107",
@@ -140,11 +139,11 @@
     },
     {
       "id": "w2V8BPq",
-      "productName": "kglklil",
-      "productId": "8uo",
-      "category": "Category B",
-      "price": 80,
-      "description": "this.product.save(this.product).subscribe((data: any) => {\n      this.product = data;\n      console.log(this.product)\n    })"
+      "productName": "something",
+      "productId": "8uo1rt",
+      "category": "CatA",
+      "price": "$8000",
+      "description": "This product save this.product subscribe data an this product  data console log this product. This product save this.product subscribe data an this product  data console log this product."
     },
     {
       "id": "j4R7yKW",
