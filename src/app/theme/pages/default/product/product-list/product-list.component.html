@@ -96,7 +96,7 @@
                         <div class="row m-row--no-padding align-items-center">
                           <div class="col">
                             <div class="m-widget5__pic">
-                              <img class="m-widget7__img" [src]="product.image" alt="">
+                              <img class="m-widget5__img" [src]="product.image" onError="this.src='assets/app/media/img/products/product1.jpg';" alt="">
                             </div>
                             <div class="m-widget5__content">
                               <a class="text-light" [routerLink]="['/product/detail', product.id]">

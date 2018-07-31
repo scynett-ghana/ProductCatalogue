@@ -19,7 +19,7 @@ export class ProductFormComponent implements OnInit {
     const value = this.productForm.value;
     console.log(value);
 
-    if (this.productValue.id === undefined) {
+    if (!this.productValue) {
       this.product.save(this.productForm.value).subscribe((data: any) => {
         this.product = data;
         this.createProductForm();

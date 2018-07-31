@@ -16,13 +16,6 @@
     </div>
   </div>
 
-
-  <a [routerLink]="['/product/edit', product?.id]" class="m-nav__link m-nav__link--icon">
-    <button type="button" class="btn btn-outline-custom m-btn m-btn--pill m-btn--wide btn-sm">Update</button>
-
-
-  </a>
-
   <div class="m-content p-2 m-2">
 
     <div class="row ">
@@ -35,16 +28,16 @@
                 <div class="m-stack m-stack--ver m-stack--desktop">
                   <div class="m-grid__item m-grid__item--fluid m-wrapper">
 
-
+                    <a [routerLink]="['/product/edit', product?.id]" class="m-nav__link m-nav__link--icon float-right">
+                      <button type="button" class="btn m-btn m-btn--pill m-btn--wide btn-sm btn-metal">Update</button>
+                    </a>
 
                     <div class="m-widget3">
                       <div class="m-widget3__item">
                         <div class="m-widget3__header">
                           <div class="m-widget3__user-img">
-                            <img class="m-widget5__img-width" src="../../assets/app/media/img/users/user1.jpg" style="width:300px">
+                            <img class="m-widget5__img-width" [src]="product.image" style="width:300px">
                           </div>
-
-
 
                           <div class="m-widget3__info">
                             <span class="m-widget3__title">
