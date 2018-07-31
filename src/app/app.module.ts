@@ -9,6 +9,10 @@ import { AppComponent } from './app.component';
 import { ScriptLoaderService } from "./_services/script-loader.service";
 import { ThemeRoutingModule } from "./theme/theme-routing.module";
 import { AuthModule } from "./auth/auth.module";
+import { ImageCropperModule } from 'ngx-image-cropper';
+import { SharedModule } from './theme/pages/default/shared/shared.module';
+
+
 
 @NgModule({
     declarations: [
@@ -22,6 +26,8 @@ import { AuthModule } from "./auth/auth.module";
         AppRoutingModule,
         ThemeRoutingModule,
         AuthModule,
+        ImageCropperModule,
+        SharedModule
     ],
     providers: [ScriptLoaderService],
     bootstrap: [AppComponent]

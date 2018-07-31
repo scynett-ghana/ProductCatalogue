@@ -68,7 +68,6 @@ m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
               <div class="form-group m-form__group">
                 <label for=""> Unit Price </label>
                 <div class="input-group">
-                  <span class="input-group-text"> $ </span>
                   <input formControlName="price" type="text" class="form-control m-input m-input--air m-input--pill" aria-describedby="" placeholder="Enter Unit Price"
                     id="number">
                 </div>
@@ -91,11 +90,8 @@ m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
           </div>
           <div class="col col-lg-6">
             <div class="form-group m-form__group">
-              <div class="media">
-                <img class="m--margin-right-20" src="http://via.placeholder.com/350x150" title="">
-              </div>
-              <div class="d-flex align-items-center mt-1">
-                <button type="" class="btn btn-dark w-25"> Upload </button>
+              <div class="d-flex align-items-center">
+                <button type="" (click)="openImgUpload()" class="btn m-btn m-btn--pill m-btn--wide btn-md btn-metal"> Upload Image </button>
               </div>
             </div>
           </div>
@@ -104,3 +100,6 @@ m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
     </div>
   </div>
   <!--end::Portlet-->
+</body>
+
+<app-imageupload (productImage)="uploadImage($event)"></app-imageupload>

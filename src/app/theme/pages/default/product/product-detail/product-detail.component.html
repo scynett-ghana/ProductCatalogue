@@ -36,11 +36,12 @@
                       <div class="m-widget3__item">
                         <div class="m-widget3__header">
                           <div class="m-widget3__user-img">
-                            <img class="m-widget5__img-width" [src]="product.image" style="width:300px">
+                            <img class="m-widget5__img-width" [src]="product.image" onError="this.src='assets/app/media/img/products/product1.jpg';"
+                              alt="" style="width:300px">
                           </div>
 
                           <div class="m-widget3__info">
-                            <span class="m-widget3__title">
+                            <span class="m-widget3__title text-dark">
                               <h4>{{product?.productName|uppercase}} </h4>
                             </span>
 

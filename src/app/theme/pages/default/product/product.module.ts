@@ -52,8 +52,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     RouterModule.forChild(routes),
     NgbModule.forRoot(),
-    NgbPaginationModule
-
+    NgbPaginationModule,
   ],
   declarations: [
     ProductListComponent,
