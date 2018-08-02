@@ -19,60 +19,48 @@
   <div class="m-content p-2 m-2">
 
     <div class="row ">
-      <div class="">
-        <!--begin::Portlet-->
-        <div class="m-portlet m-portlet--mobile">
-          <div class="m-portlet__body">
-            <div class="m-grid m-grid--hor m-grid--root m-page">
-              <div class="m-container m-container--fluid m-container--full-height">
-                <div class="m-stack m-stack--ver m-stack--desktop">
-                  <div class="m-grid__item m-grid__item--fluid m-wrapper">
+      <!--begin::Portlet-->
+      <div class="m-portlet m-portlet--mobile">
+        <div class="m-portlet__body">
+          <div class="m-grid m-grid--hor m-grid--root m-page">
+            <div class="m-container m-container--fluid m-container--full-height">
+              <div class="m-stack m-stack--ver m-stack--desktop">
+                <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                  <button [routerLink]="['/product/edit', product?.id]" type="button" class="btn m-btn m-btn--pill btn-sm btn-metal float-right">Update</button>
+                  <div class="m-widget3">
+                    <div class="m-widget3__item">
+                      <div class="m-widget3__header">
+                        <div class="m-widget3__user-img">
+                          <img [src]="product?.image" alt="" style="width:300px">
+                        </div>
 
-                    <a [routerLink]="['/product/edit', product?.id]" class="m-nav__link m-nav__link--icon float-right">
-                      <button type="button" class="btn m-btn m-btn--pill m-btn--wide btn-sm btn-metal">Update</button>
-                    </a>
+                        <div class="m-widget3__info">
+                          <span class="m-widget3__title text-dark">
+                            <h4>{{product?.productName|uppercase}} </h4>
+                          </span>
 
-                    <div class="m-widget3">
-                      <div class="m-widget3__item">
-                        <div class="m-widget3__header">
-                          <div class="m-widget3__user-img">
-                            <img class="m-widget5__img-width" [src]="product.image" onError="this.src='assets/app/media/img/products/product1.jpg';"
-                              alt="" style="width:300px">
-                          </div>
-
-                          <div class="m-widget3__info">
-                            <span class="m-widget3__title text-dark">
-                              <h4>{{product?.productName|uppercase}} </h4>
-                            </span>
-
-                            <h6>
-                              <p>
-                                <span class="m-widget6__time">
-                                  {{product?.productId}}
-                                </span>
-                              </p>
-                              <p>
-                                <span class="m-widget6__time">
-                                  {{product?.category}}
-                                </span>
-                              </p>
+                          <h6>
+                            <p>
                               <span class="m-widget6__time">
-                                Unit Price
-                              </span>
-                            </h6>
-
-                            <p class="m-widget3__text">
-                              <span>
-                                {{product?.description}}
+                                {{product?.productId}}
                               </span>
                             </p>
+                            <p>
+                              <span class="m-widget6__time">
+                                {{product?.category}}
+                              </span>
+                            </p>
+                            <span class="m-widget6__time">
+                              Unit Price
+                            </span>
+                          </h6>
 
+                          <p class="m-widget3__text">
+                            <span>
+                              {{product?.description}}
+                            </span>
+                          </p>
 
-
-
-
-
-                          </div>
                         </div>
                       </div>
                     </div>

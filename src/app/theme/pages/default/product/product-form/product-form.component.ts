@@ -26,20 +26,20 @@ export class ProductFormComponent implements OnInit {
   ) { }
 
   submit() {
-    const value = this.productForm.value;
-    console.log(value);
+
+    if (this.productImageUpload) {
+      this.productForm.value.image = this.productImageUpload;
+    }
 
     if (!this.productValue) {
       this.product.save(this.productForm.value).subscribe((data: any) => {
         this.product = data;
-        this.productImageUpload;
         this.createProductForm();
       })
     }
     else {
       this.product.update(this.productValue.id, this.productForm.value).subscribe((data: any) => {
         this.productValue = data;
-        this.productImageUpload;
         this.createProductForm();
       })
     }
@@ -49,9 +49,7 @@ export class ProductFormComponent implements OnInit {
 
   uploadImage(productImage) {
     this.productImageUpload = productImage;
-    console.log(this.productImageUpload)
   }
-
 
   openImgUpload() {
     const modalRef = this.modalService.open(ImageUploadComponent, { size: 'lg' });

@@ -6,17 +6,25 @@
 </div>
 <div class="modal-body">
   <div class="row">
+    <input type="file" class="form-control m-input m-input--air m-input--pill" (change)="fileChangeEvent($event)" accept="image/gif, image/jpeg"
+    />
     <div class="col-lg-6">
-      <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="4 / 4" [resizeToWidth]="164"
-        format="jpg" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" (loadImageFailed)="loadImageFailed()"
-        style="max-height: 60vh" [style.display]="cropperReady ? null : 'none'">
-      </image-cropper>
+      <div class="border">
+        <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="4 / 4" [resizeToWidth]="164"
+          format="jpg" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" (loadImageFailed)="loadImageFailed()"
+          style="max-height: 60vh" [style.display]="cropperReady ? null : 'none'">
+        </image-cropper>
+      </div>
+
     </div>
     <div class="col-lg-6">
-      <img [src]="croppedImage" />
+      <div class="border d">
+        <img [src]="croppedImage" />
+      </div>
+
     </div>
   </div>
-  <input type="file" class="form-control m-input m-input--air m-input--pill" (change)="fileChangeEvent($event)" />
+
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-outline-dark" (click)="onSubmit()">Save</button>
