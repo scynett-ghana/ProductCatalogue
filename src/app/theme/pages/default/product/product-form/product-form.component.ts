@@ -35,12 +35,14 @@ export class ProductFormComponent implements OnInit {
       this.product.save(this.productForm.value).subscribe((data: any) => {
         this.product = data;
         this.createProductForm();
+        this.productImageUpload = "";
       })
     }
     else {
       this.product.update(this.productValue.id, this.productForm.value).subscribe((data: any) => {
         this.productValue = data;
         this.createProductForm();
+        this.productImageUpload = "";
       })
     }
 

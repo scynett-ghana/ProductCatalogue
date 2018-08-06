@@ -1,57 +1,58 @@
-<div class="m-subheader">
-  <div class="d-flex align-items">
-    <div class="mr-auto">
-      <h1 class="m-subheader__title m-subheader__title--separator">
-        Product Details
-      </h1>
-      <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
-        <li class="m-nav__item m-nav__item--home">
-          <a href="#" class="m-nav__link m-nav__link--icon">
-            <i class="m-nav__link-icon la la-home"></i>
-          </a>
-        </li>
+<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+  <div class="m-grid m-grid--hor m-grid--root m-page">
+    <div class="m-container m-container--fluid m-container--full-height">
+      <div class="m-subheader">
+        <div class="d-flex align-items">
+          <div class="mr-auto">
+            <h1 class="m-subheader__title m-subheader__title--separator">
+              Product Details
+            </h1>
+            <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+              <li class="m-nav__item m-nav__item--home">
+                <a href="#" class="m-nav__link m-nav__link--icon">
+                  <i class="m-nav__link-icon la la-home"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-      </ul>
-
-    </div>
-  </div>
-
-  <div class="row ">
-    <!--begin::Portlet-->
-    <div class="m-portlet">
-      <div class="m-portlet__body">
-        <div class="m-grid__item m-grid__item--fluid m-wrapper">
-          <button [routerLink]="['/product/edit', product?.id]" type="button" class="btn m-btn m-btn--pill btn-sm btn-metal float-right">Update</button>
-          <div class="m-widget3">
-            <div class="m-widget3__item">
-              <div class="m-widget3__header">
-                <div class="m-widget3__user-img">
-                  <img *ngIf="product?.image" [src]="product?.image" alt="" style="width:300px">
-                </div>
-                <div class="m-widget3__info">
-                  <span class="m-widget1__title text-dark">
-                    <h2>{{product?.productName | uppercase}} </h2>
-                  </span>
-                  <p class="m-widget5__desc">
-                    {{product?.productId | lowercase}}
-                  </p>
-                  <h5 class="m-widget5__author m-widget5__info">
-                    {{product?.category}}
-                  </h5>
-                  <p class="m-widget5__price">
-                    {{product?.price}}
-                  </p>
-                  <p class="m-widget1__text">
-                    <span>
-                      {{product?.description}}
-                    </span>
-                  </p>
+        <div class="m-content px-0">
+          <!--begin::Portlet-->
+          <div class="m-portlet">
+            <div class="m-portlet__body">
+              <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                <button [routerLink]="['/product/edit', product?.id]" type="button" class="btn m-btn m-btn--pill btn-sm btn-metal float-right">Update</button>
+                <div class="m-widget3">
+                  <div class="m-widget3__item">
+                    <div class="m-widget3__header">
+                      <div class="m-widget3__user-img">
+                        <img *ngIf="product?.image" [src]="product?.image" alt="" style="width:300px">
+                      </div>
+                      <div class="m-widget3__info">
+                        <span class="m-widget1__title text-dark">
+                          <h2>{{product?.productName | uppercase}} </h2>
+                        </span>
+                        <p class="m-widget5__desc">
+                          {{product?.productId | lowercase}}
+                        </p>
+                        <h5 class="m-widget5__author m-widget5__info">
+                          {{product?.category}}
+                        </h5>
+                        <p class="m-widget5__price">
+                          {{product?.price}}
+                        </p>
+                        <p class="m-widget1__text">
+                          <span>
+                            {{product?.description}}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>

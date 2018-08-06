@@ -6,8 +6,12 @@
 </div>
 <div class="modal-body">
   <div class="row">
-    <input type="file" class="form-control m-input m-input--air m-input--pill" (change)="fileChangeEvent($event)" accept="image/gif, image/jpeg"
-    />
+    <div class="custom-file">
+      <input type="file" class=" custom-file-input" id="file" (change)="fileChangeEvent($event)" accept="image/gif, image/jpeg">
+      <label class="custom-file-label" for="file">
+        Choose file
+      </label>
+    </div>
     <div class="col-lg-6">
       <div class="border">
         <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="4 / 4" [resizeToWidth]="164"
@@ -17,11 +21,8 @@
       </div>
 
     </div>
-    <div class="col-lg-6">
-      <div class="border d">
-        <img [src]="croppedImage" />
-      </div>
-
+    <div class="col-lg-6 m-dropzone dropzone m-dropzone--dark">
+      <img [src]="croppedImage">
     </div>
   </div>
 

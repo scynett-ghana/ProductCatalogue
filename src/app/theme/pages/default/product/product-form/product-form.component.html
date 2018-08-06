@@ -90,8 +90,10 @@ m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
           </div>
           <div class="col col-lg-6">
             <div class="form-group m-form__group">
-              <div class="d-flex align-items-center">
-                <button type="" (click)="openImgUpload()" class="btn m-btn m-btn--pill m-btn--wide btn-md btn-metal"> Upload Image </button>
+              <div class="col-lg-4 col-md-9 px-2 col-sm-12 d-flex justify-content-center align-items-center">
+                <div class="m-dropzone dropzone m-dropzone--dark" (click)="openImgUpload()" data-toggle="m-tooltip" title="Click to upload image" style="width:300px">
+                  <img [src]="productImageUpload" onError="this.src='http://placehold.it/250';">
+                </div>
               </div>
             </div>
           </div>
