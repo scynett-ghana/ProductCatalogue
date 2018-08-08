@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from './../../../../../_services/product.service';
 import { Component, OnInit } from '@angular/core';
@@ -22,10 +23,20 @@ export class ProductFormComponent implements OnInit {
   constructor(private product: ProductService,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private router: Router
   ) { }
 
   submit() {
+    if (this.productForm.invalid) {
+      const p = this.productForm.value;
+      for (const key in p) {
+        if (p.hasOwnProperty(key)) {
+          this.productForm.controls[key].markAsTouched();
+        }
+      }
+      return;
+    }
 
     if (this.productImageUpload) {
       this.productForm.value.image = this.productImageUpload;
@@ -34,15 +45,17 @@ export class ProductFormComponent implements OnInit {
     if (!this.productValue) {
       this.product.save(this.productForm.value).subscribe((data: any) => {
         this.product = data;
-        this.createProductForm();
-        this.productImageUpload = "";
+        this.router.navigate(['product/list'])
+        // this.createProductForm();
+        // this.productImageUpload = "";
       })
     }
     else {
       this.product.update(this.productValue.id, this.productForm.value).subscribe((data: any) => {
         this.productValue = data;
-        this.createProductForm();
-        this.productImageUpload = "";
+        this.router.navigate(['product/list'])
+        //this.createProductForm();
+        // this.productImageUpload = "";
       })
     }
 
@@ -71,8 +84,9 @@ export class ProductFormComponent implements OnInit {
     }
 
     this.product.getOne(id)
-      .subscribe((data) => {
+      .subscribe((data: any) => {
         this.productValue = data;
+        this.productImageUpload = data.image;
         this.fillProductForm(this.productValue)
         console.log(this.productValue)
       });

@@ -10,7 +10,7 @@ m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
           </h3>
           <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
             <li class="m-nav__item m-nav__item--home">
-              <a href="#" class="m-nav__link m-nav__link--icon">
+              <a [routerLink]="['/product/list']" class="m-nav__link m-nav__link--icon">
                 <i class="m-nav__link-icon la la-home"></i>
               </a>
             </li>
@@ -81,8 +81,8 @@ m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
               </div>
               <div class="m-portlet__foot m-portlet__foot--fit ">
                 <div class="m-form__actions">
-                  <button (click)="submit()" [disabled]="productForm.invalid" type="submit" class="btn btn-dark"> Add </button>
-                  <button type="reset" class="btn btn-secondary"> Cancel </button>
+                  <button (click)="submit()" type="submit" class="btn btn-dark m-btn m-btn--custom"> Add </button>
+                  <button type="reset" [routerLink]="['/product/list']" class="btn btn-danger m-btn m-btn--custom"> Cancel </button>
                 </div>
               </div>
             </form>
@@ -91,8 +91,9 @@ m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
           <div class="col col-lg-6">
             <div class="form-group m-form__group">
               <div class="col-lg-4 col-md-9 px-2 col-sm-12 d-flex justify-content-center align-items-center">
-                <div class="m-dropzone dropzone m-dropzone--dark" (click)="openImgUpload()" data-toggle="m-tooltip" title="Click to upload image" style="width:300px">
-                  <img [src]="productImageUpload" onError="this.src='http://placehold.it/250';">
+                <div class="m-dropzone dropzone m-dropzone--dark" (click)="openImgUpload()" data-toggle="m-tooltip" title="Click to upload image"
+                  style="width:300px">
+                  <img [src]="productImageUpload || 'http://placehold.it/250'">
                 </div>
               </div>
             </div>
